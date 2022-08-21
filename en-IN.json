@@ -1,0 +1,493 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "salon and spa",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "GetNameIntent",
+          "slots": [
+            {
+              "name": "firstName",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "I am {firstName}"
+              ]
+            },
+            {
+              "name": "lastName",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "My last name is {lastName}",
+                "{lastName}"
+              ]
+            }
+          ],
+          "samples": [
+            "My name is {firstName}",
+            "This is {firstName} {lastName}",
+            "I am {firstName} {lastName}",
+            "My name is {firstName} {lastName}"
+          ]
+        },
+        {
+          "name": "SalonbookIntent",
+          "slots": [],
+          "samples": []
+        },
+        {
+          "name": "GetPhoneNumber",
+          "slots": [
+            {
+              "name": "phone",
+              "type": "AMAZON.PhoneNumber",
+              "samples": [
+                "My phone number is {phone}"
+              ]
+            }
+          ],
+          "samples": [
+            "{phone}",
+            "Here\u0027s my phone number {phone}",
+            "My phone is {phone}"
+          ]
+        },
+        {
+          "name": "LoggedInIntent",
+          "slots": [
+            {
+              "name": "service",
+              "type": "services"
+            }
+          ],
+          "samples": []
+        },
+        {
+          "name": "DateandTimeIntent",
+          "slots": [
+            {
+              "name": "appointmentDate",
+              "type": "AMAZON.DATE",
+              "samples": [
+                "{appointmentDate} looks good",
+                "on {appointmentDate}"
+              ]
+            },
+            {
+              "name": "appointmentTime",
+              "type": "AMAZON.TIME",
+              "samples": [
+                "{appointmentTime} looks good",
+                "at {appointmentTime}"
+              ]
+            }
+          ],
+          "samples": [
+            "{appointmentTime} on {appointmentDate}",
+            "{appointmentDate} at {appointmentTime}",
+            "schedule an appointment on {appointmentDate} at {appointmentTime}",
+            "schedule an appointment at {appointmentTime} on {appointmentDate}",
+            "make an appointment on {appointmentDate} at {appointmentTime}"
+          ]
+        },
+        {
+          "name": "HairServicesIntent",
+          "slots": [
+            {
+              "name": "hairTypes",
+              "type": "hairTypes"
+            }
+          ],
+          "samples": []
+        },
+        {
+          "name": "BeautyServicesIntent",
+          "slots": [
+            {
+              "name": "beautyTypes",
+              "type": "beautyTypes"
+            }
+          ],
+          "samples": []
+        },
+        {
+          "name": "RelaxingTherapiesIntent",
+          "slots": [
+            {
+              "name": "relaxingType",
+              "type": "relaxingType"
+            }
+          ],
+          "samples": []
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Hair Color"
+              }
+            },
+            {
+              "name": {
+                "value": "Anti Dandruff Treatment"
+              }
+            },
+            {
+              "name": {
+                "value": "Beard Trim"
+              }
+            },
+            {
+              "name": {
+                "value": "Deluxe Shave"
+              }
+            },
+            {
+              "name": {
+                "value": "Hair Styling"
+              }
+            },
+            {
+              "name": {
+                "value": "Hair Cut "
+              }
+            },
+            {
+              "name": {
+                "value": "Hair Wash"
+              }
+            }
+          ],
+          "name": "hairTypes"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Bleach"
+              }
+            },
+            {
+              "name": {
+                "value": "Facial"
+              }
+            },
+            {
+              "name": {
+                "value": "Waxing"
+              }
+            },
+            {
+              "name": {
+                "value": "Fruit facial"
+              }
+            },
+            {
+              "name": {
+                "value": "Manicure"
+              }
+            },
+            {
+              "name": {
+                "value": "Pedicure"
+              }
+            }
+          ],
+          "name": "beautyTypes"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Relaxing Therapies",
+                "synonyms": [
+                  "Relaxing",
+                  "Relaxing Services"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Beauty Services",
+                "synonyms": [
+                  "Beauty"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Hair Services",
+                "synonyms": [
+                  "Hair wash",
+                  "Hair Cut",
+                  "Hair"
+                ]
+              }
+            }
+          ],
+          "name": "services"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Body Scrub"
+              }
+            },
+            {
+              "name": {
+                "value": "Moroccon Oil Head Massage"
+              }
+            },
+            {
+              "name": {
+                "value": "Candle Massage"
+              }
+            },
+            {
+              "name": {
+                "value": "Aroma Massage"
+              }
+            },
+            {
+              "name": {
+                "value": "Deep Tissue Massage"
+              }
+            }
+          ],
+          "name": "relaxingType"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "GetNameIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.1640651862941"
+          },
+          "slots": [
+            {
+              "name": "firstName",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.976504328043.1080473418457"
+              }
+            },
+            {
+              "name": "lastName",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.976504328043.1385501993281"
+              }
+            }
+          ]
+        },
+        {
+          "name": "SalonbookIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": []
+        },
+        {
+          "name": "GetPhoneNumber",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "phone",
+              "type": "AMAZON.PhoneNumber",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1320478954378.367089855050"
+              },
+              "validations": [
+                {
+                  "type": "isNotInSet",
+                  "prompt": "Slot.Validation.1320478954378.367089855050.1425413734059",
+                  "values": [
+                    "0"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "LoggedInIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": []
+        },
+        {
+          "name": "DateandTimeIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "appointmentDate",
+              "type": "AMAZON.DATE",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.375760501997.552260815891"
+              }
+            },
+            {
+              "name": "appointmentTime",
+              "type": "AMAZON.TIME",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.375760501997.1041831820410"
+              }
+            }
+          ]
+        },
+        {
+          "name": "HairServicesIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "hairTypes",
+              "type": "hairTypes",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Slot.Validation.976504328043.1385501993281.151491162665",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please repeat your last name."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.976504328043.1080473418457",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "May I know your good name?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Okay Mr. {lastName} , what is your first Name?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.976504328043.1385501993281",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Okay {firstName} , what is your surname?"
+          },
+          {
+            "type": "PlainText",
+            "value": "May I know your last name?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.1074006130179.412387873416",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "{firstName} {lastName} did I get it right?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.1640651862941",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "{firstName} {lastName} did I get that right?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1320478954378.367089855050",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please tell me your ten digit phone number"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1320478954378.367089855050.1425413734059",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Awesome, We offer different services Hair services, Beauty Services, Bridal Services, Stress Reliving Therapies and Relaxing therapies"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.190765567308.1587464515555.570754987435",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Thank you. Please tell us the date when you wish to book the appointment for."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.375760501997.552260815891",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What date would like to schedule it?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.375760501997.1041831820410",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What time would you like to schedule it?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "33"
+}
